@@ -16,7 +16,7 @@ aws.config.region = "us-west-2";
 var s3 = new aws.S3();
 
 
-var SpiderPig = function(seedurl, uuid, distid, s3bucket) {
+var AptSpider = function(seedurl, uuid, distid, s3bucket) {
     this.seedUrl = url.parse("http://www." + seedurl);
     this.bucketPath = uuid.slice(0,2) + "/" + uuid;
     this.s3bucket = s3bucket,
@@ -24,7 +24,7 @@ var SpiderPig = function(seedurl, uuid, distid, s3bucket) {
 };
 
 
-SpiderPig.prototype.crawl = function() {
+AptSpider.prototype.crawl = function() {
     var getS3Head = function(getparams, cb) {
         s3.headObject(getparams, function(err, data) {
             if (err) return cb(err); 
