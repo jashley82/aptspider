@@ -1,5 +1,5 @@
 # aptspider
-crawl a site, copy static content into an s3 bucket, compare md5 hashes, and perform cloudfront invalidations on updated files
+crawl a site, copy static content into an s3 bucket, compare md5 hashes of existing and new versions of files, perform cloudfront invalidations
 
 install dependencies
 ```bash
